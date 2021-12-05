@@ -24,11 +24,11 @@ for (let i = 0; i < SQUEARS_NUMBER; i++) {
 
     square.classList.add('square')
 
-    square.addEventListener('mouseover', () => {
+    square.addEventListener('pointerover', () => {
         setColor(square)
     })
 
-    square.addEventListener('mouseleave', () => {
+    square.addEventListener('pointerleave', () => {
         removeColor(square)
     })
 
