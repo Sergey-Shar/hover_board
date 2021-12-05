@@ -16,6 +16,7 @@ const setColor = (item) => {
 
 const removeColor = (item) => {
     item.style.backgroundColor = "#1d1d1d"
+    item.style.boxShadow = `0 0 2px #000`
 }
 
 for (let i = 0; i < SQUEARS_NUMBER; i++) {
