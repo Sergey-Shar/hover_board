@@ -1,0 +1,35 @@
+const board = document.querySelector('#root')
+const SQUEARS_NUMBER = 500
+const colors = ['white', 'red']
+
+const getRandomColor = () => {
+    const index = Math.floor(Math.random() * colors.length)
+    return colors[index]
+}
+
+const setColor = (item) => {
+    const color = getRandomColor()
+    item.style.backgroundColor = color
+    item.style.boxShadow = `0 0 2px ${color},
+    0 0 10px ${color}`
+}
+
+const removeColor = (item) => {
+    item.style.backgroundColor = "#1d1d1d"
+}
+
+for (let i = 0; i < SQUEARS_NUMBER; i++) {
+    const square = document.createElement('div')
+
+    square.classList.add('square')
+
+    square.addEventListener('mouseover', () => {
+        setColor(square)
+    })
+
+    square.addEventListener('mouseleave', () => {
+        removeColor(square)
+    })
+
+    board.append(square)
+}
