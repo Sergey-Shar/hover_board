@@ -1,6 +1,6 @@
 const board = document.querySelector('#root')
 const SQUEARS_NUMBER = 500
-const colors = ['white', 'red']
+const colors = ['blue', 'yellow']
 
 const getRandomColor = () => {
     const index = Math.floor(Math.random() * colors.length)
